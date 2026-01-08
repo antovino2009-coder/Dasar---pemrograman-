@@ -1,0 +1,26 @@
+class Siswa:
+    def __init__(self, nama, kelas, nilai):
+        self.nama = nama
+        self.kelas = kelas
+        self.nilai = nilai
+        
+    def tampilkan_data(self):
+        print("\n=== DATA SISWA ===")
+        print("nama  :", self.nama)
+        print("kelas :", self.kelas)
+        print("nilai :", self.nilai)
+        
+        
+    def status_kelulusan(self):
+        if self.nilai >= 75:
+            print("keterangan : Lulus")
+        else:
+            print("keterangan : Anda Tidak Lulus")
+            
+nama = input("masukkan nama siswa : ")
+kelas = input("masukkan kelas siswa : ")
+nilai = int(input("masukkan nilai siswa : "))
+
+siswa1 = Siswa(nama, kelas, nilai)
+siswa1.tampilkan_data()
+siswa1.status_kelulusan()

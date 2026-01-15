@@ -1,0 +1,25 @@
+from datetime import datetime as dt
+
+class Pembayaran:
+    def __init__(self, nama, jl_spp, bulan):
+        self.nama = nama
+        self.jl_spp = jl_spp
+        self.bulan = bulan
+        self.waktu = dt.now()
+        
+    def tampilkan_data(self):
+        print("\n=== BUKTI PEMBAYARAN")
+        print("nama  :", self.nama)
+        print("jl_spp: Rp", self.jl_spp)
+        print("bulan :", self.bulan)
+        print("waktu :", self.waktu.strftime("%d-%m-%Y %H:%M:%S"))
+        
+ulang = int(input("masukkan berapa data yang ingin dimasukkan : "))
+for i in range(ulang):
+    nama = input("masukkan nama siswa : ")
+    jl_spp = int(input('masukkan jumlah pembayaran : '))
+    bulan = input("masukkan bulan spp : ")
+    pembayaran1 = Pembayaran(nama, jl_spp, bulan)
+    
+for i in range(ulang):    
+    pembayaran1.tampilkan_data()

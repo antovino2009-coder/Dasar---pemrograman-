@@ -1,0 +1,47 @@
+class Produk:
+    def __init__(self, nama, harga):
+        self.nama = nama
+        self.harga = harga
+
+    def info_produk(self):
+        print("Nama Produk :", self.nama)
+        print("Harga       : Rp", self.harga)
+
+class Buku(Produk):
+    def __init__(self, nama, harga, penulis):
+        super().__init__(nama, harga)
+        self.penulis = penulis
+
+    def tampilkan(self):
+        self.info_produk()
+        print("Penulis     :", self.penulis)
+
+
+class Elektronik(Produk):
+    def __init__(self, nama, harga, garansi):
+        super().__init__(nama, harga)
+        self.garansi = garansi
+
+    def tampilkan(self):
+        self.info_produk()
+        print("Garansi     :", self.garansi, "tahun")
+
+print("=== INPUT DATA BUKU ===")
+nama_buku = input("Nama buku     : ")
+harga_buku = int(input("Harga buku    : "))
+penulis = input("Nama penulis  : ")
+
+buku1 = Buku(nama_buku, harga_buku, penulis)
+
+print("\n=== INPUT DATA ELEKTRONIK ===")
+nama_elektronik = input("Nama barang   : ")
+harga_elektronik = int(input("Harga barang  : "))
+garansi = int(input("Lama garansi (tahun): "))
+
+elek1 = Elektronik(nama_elektronik, harga_elektronik, garansi)
+
+print("\n=== DATA BUKU ===")
+buku1.tampilkan()
+
+print("\n=== DATA ELEKTRONIK ===")
+elek1.tampilkan()

@@ -1,0 +1,46 @@
+class Orang:
+    def __init__(self, nama, umur):
+        self.nama = nama
+        self.umur = umur
+        
+    def info(self):
+        print("Nama :", self.nama)
+        print("umur :", self.umur)
+        
+class Siswa(Orang):
+    def __init__(self, nama, umur, kelas):
+        super().__init__(nama, umur)
+        self.kelas = kelas
+        
+    def info_siswa(self):
+        self.info()
+        print("Kelas:", self.kelas)
+        
+class Guru(Orang):
+    def __init__(self, nama, umur, mapel):
+        super().__init__(nama, umur)
+        self.mapel = mapel
+        
+    def info_Guru(self):
+        self.info()
+        print("Mapel :", self.mapel)
+        
+print("=== INPUT DATA SISWA ===")
+nama_siswa = input("Masukkan nama siswa : ")
+umur_siswa = int(input("Masukkan umur siswa : "))
+kelas = input("Masukkan kelas siswa : ")
+
+siswa1 = Siswa(nama_siswa, umur_siswa, kelas)
+
+print("\n=== INPUT DATA GURU ===")
+nama_guru = input("Masukkan nama guru : ")
+umur_guru = int(input("Masukkan umur guru : "))
+mapel = input("Masukkan mata pelajaran : ")
+
+guru1 = Guru(nama_guru, umur_guru, mapel)
+        
+print("\n=== DATA SISWA ===")
+siswa1.info_siswa()
+
+print("\n=== DATA GURU ===")
+guru1.info_Guru()

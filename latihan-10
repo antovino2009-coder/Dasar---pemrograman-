@@ -1,0 +1,17 @@
+class Hewan:
+    def bersuara(self):
+        print("Hewan bersuara")
+        
+class Kucing(Hewan):
+    def bersuara(self):
+        print("Meong")
+        
+class Anjing(Hewan):
+    def bersuara(self):
+        print("Guk guk")
+        
+hewan1 = Kucing()
+hewan2 = Anjing()
+
+hewan1.bersuara()
+hewan2.bersuara()

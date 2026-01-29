@@ -1,0 +1,34 @@
+class Hewan:
+    def bersuara(self):
+        pass
+    
+class Kucing(Hewan):
+    def bersuara(self):
+        return "Kucing bersuara : Meong"
+        
+class Anjing(Hewan):
+    def bersuara(self):
+        return "Anjing bersuara : Guk guk"
+        
+class Sapi(Hewan):
+    def bersuara(self):
+        return "Sapi bersuara : Moo"
+        
+while True:
+    pilih = input("\nPilih hewan (kucing/anjing/sapi) atau 'keluar': ")
+
+    if pilih == "kucing":
+        hewan = Kucing()
+    elif pilih == "anjing":
+        hewan = Anjing()
+    elif pilih == "sapi":
+        hewan = Sapi()
+    elif pilih == "keluar":
+        print("Program selesai 👋")
+        break
+    else:
+        print("Pilihan tidak tersedia")
+        continue
+
+    hasil = hewan.bersuara()
+    print(hasil)

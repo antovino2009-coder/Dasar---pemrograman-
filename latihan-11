@@ -1,0 +1,17 @@
+#metode yang sama di kelas yang berbeda
+class Mobil:
+    def jalan(self):
+        print("mobil berjalan di jalan raya")
+        
+class Kapal:
+    def jalan(self):
+        print("kapal berlayar di laut")
+        
+def jalankan_kendaraan(kendaraan):
+    kendaraan.jalan()
+    
+mobil = Mobil()
+kapal = Kapal()
+
+jalankan_kendaraan(mobil)
+jalankan_kendaraan(kapal)

@@ -1,0 +1,11 @@
+def tambah(*angka):
+    total = 0
+    for i in angka:
+        total += i
+    return total
+
+data = input("\nMasukkan beberapa angka (pisahkan dengan spasi): ")
+angka_list = list(map(int, data.split()))
+
+hasil = tambah(*angka_list)
+print("Hasil penumlahan:", hasil)
